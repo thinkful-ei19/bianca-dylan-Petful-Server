@@ -28,7 +28,6 @@ app.get('/api/cat',(req, res)=> {
 });
 app.delete('/api/cat', (req, res)=> {
   catQueue.dequeue();
-  res.json(catQueue.peek());
   console.log('You have adopted a cat!');
   res.status(204).end();
   //return 
@@ -38,7 +37,6 @@ app.get('/api/dog',(req,res)=> {
 });
 app.delete('/api/dog', (req,res)=> {
   dogQueue.dequeue();
-  res.json(dogQueue.peek());
   console.log('You have adopted a dog!')
   res.status(204).end();
 });
