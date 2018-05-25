@@ -22,7 +22,7 @@ app.use(
     origin: CLIENT_ORIGIN
   })
 );
-
+app.get('/',  (req, res) => res.sendFile(__dirname + '/index.html'));
 app.get('/api/cat',(req, res)=> {
    res.json(catQueue.peek());
 });
