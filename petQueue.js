@@ -57,7 +57,7 @@ class petQueue {
         story: 'Thrown on the street'
       });
     catQueue.enqueue({
-        imageURL:'https://visualhunt.com/photo/201247/', 
+        imageURL:'https://visualhunt.com/photos/7/pet-cat-eye.jpg?s=s', 
         imageDescription: 'Siamese cat with blue eyes',
         name: 'Precious',
         sex: 'Female',
@@ -66,13 +66,22 @@ class petQueue {
         story: 'Found in abandoned house'
       });
     catQueue.enqueue({
-        imageURL:'https://visualhunt.com/photo/190693/', 
-        imageDescription: 'Calico cat lounging on the sidewalk',
+        imageURL:'https://images.unsplash.com/photo-1507984211203-76701d7bb120?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=eacbf50fac29a13afba26ad7499cedee&w=1000&q=80', 
+        imageDescription: 'Calico cat lounging on the grass',
         name: 'Cutie',
         sex: 'Female',
         age: 8,
         breed: 'Calico',
         story: 'Found in abandoned house'
+      });
+    catQueue.enqueue({
+        imageURL:'http://www.catster.com/wp-content/uploads/2017/08/A-fluffy-cat-looking-funny-surprised-or-concerned.jpg', 
+        imageDescription: 'Bengal cat snarling',
+        name: 'Mongo',
+        sex: 'Female',
+        age: 1,
+        breed: 'Bengal',
+        story: 'Found walking with wolves'
       });
     dogQueue.enqueue({
         imageURL: 'http://www.dogster.com/wp-content/uploads/2015/05/Cute%20dog%20listening%20to%20music%201_1.jpg',
@@ -84,7 +93,7 @@ class petQueue {
         story: 'Owner Passed away'
       });
     dogQueue.enqueue({
-        imageURL: 'https://www.dogmal.com/dog-photos/#bwg1/66',
+        imageURL: 'https://www.askideas.com/media/26/Pit-Bull-Dog-Walking-On-Grass.jpg',
         imageDescription: 'A chocolate pitbull with a spikey collar',
         name: 'Champ',
         sex: 'Male',
@@ -93,13 +102,22 @@ class petQueue {
         story: 'Owner died'
       });
     dogQueue.enqueue({
-        imageURL: 'https://www.indiamart.com/proddetail/spitz-dog-puppy-15509775091.html',
+        imageURL: 'https://images.pexels.com/photos/33053/dog-young-dog-small-dog-maltese.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
         imageDescription: 'A white fluffy puppy',
         name: 'Bunny',
         sex: 'Male',
         age: 1,
         breed: 'Spitz',
         story: 'Found on the side of the highway'
+      });
+      dogQueue.enqueue({
+        imageURL: 'https://cdn.psychologytoday.com/sites/default/files/styles/article-inline-half/public/field_blog_entry_images/2018-02/vicious_dog_0.png?itok=nsghKOHs',
+        imageDescription: 'A scary dog showing his teeth',
+        name: 'Rex',
+        sex: 'Female',
+        age: 4,
+        breed: 'Mix',
+        story: 'Too aggressive with owners'
       });
       catQueue.peek();
     //   peek(dogQueue);
