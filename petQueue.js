@@ -83,6 +83,15 @@ class petQueue {
         breed: 'Bengal',
         story: 'Found walking with wolves'
       });
+      catQueue.enqueue({
+        imageURL:'https://i.pinimg.com/originals/27/c0/c9/27c0c96704f754cea899cddd9d554ee6.png', 
+        imageDescription: '',
+        name: '',
+        sex: '',
+        age: 0,
+        breed: '',
+        story: 'No more cats available'
+      });
     dogQueue.enqueue({
         imageURL: 'http://www.dogster.com/wp-content/uploads/2015/05/Cute%20dog%20listening%20to%20music%201_1.jpg',
         imageDescription: 'A smiling golden-brown golden retreiver listening to music.',
@@ -118,6 +127,15 @@ class petQueue {
         age: 4,
         breed: 'Mix',
         story: 'Too aggressive with owners'
+      });
+      dogQueue.enqueue({
+        imageURL:'https://thumbs.dreamstime.com/b/no-dog-sign-14337767.jpg',
+        imageDescription: '',
+        name: '',
+        sex: '',
+        age: 0,
+        breed: '',
+        story: 'No more dogs available.'
       });
       catQueue.peek();
     //   peek(dogQueue);
