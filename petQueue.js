@@ -7,7 +7,7 @@ class _Node {
         this.prec=null;
     }
 }
-class Queue {
+class petQueue {
     constructor(){
         this.first = null;
         this.last = null;
@@ -34,10 +34,19 @@ class Queue {
         }
         return node.value;
     }
+    peek(){
+        if(!this.first){
+            return;
+        }
+        else{
+            return this.first.value;
+        }
+    }
 }
-function main(){
-    let catQueue = new Queue();
-    let dogQueue = new Queue();
+
+
+    let catQueue = new petQueue();
+    let dogQueue = new petQueue();
     catQueue.enqueue({
         imageURL:'https://assets3.thrillist.com/v1/image/2622128/size/tmg-slideshow_l.jpg', 
         imageDescription: 'Orange bengal cat with black stripes lounging on concrete.',
@@ -92,7 +101,10 @@ function main(){
         breed: 'Spitz',
         story: 'Found on the side of the highway'
       });
+      catQueue.peek();
+    //   peek(dogQueue);
     //   console.log(catQueue);
     //   console.log(dogQueue);
-}
-main();
+
+
+module.exports = { petQueue, catQueue, dogQueue };

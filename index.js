@@ -3,6 +3,7 @@
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
+const {petQueue, catQueue, dogQueue} = require('./petQueue');
 
 const { PORT, CLIENT_ORIGIN } = require('./config');
 const { dbConnect } = require('./db-mongoose');
@@ -21,23 +22,25 @@ app.use(
     origin: CLIENT_ORIGIN
   })
 );
+
 app.get('/api/cat',(req, res)=> {
-  res.json(catArray[0]);
+   res.json(catQueue.peek());
 });
 app.delete('/api/cat', (req, res)=> {
-  catArray.shift();
-  res.json(catArray[0]);
+  catQueue.dequeue();
+  res.json(catQueue.peek());
   console.log('You have adopted a cat!');
   res.status(204).end();
   //return 
 });
 app.get('/api/dog',(req,res)=> {
-  res.json(dogArray[0]);
+  res.json(dogQueue.peek());
 });
 app.delete('/api/dog', (req,res)=> {
-  dogArray.shift();
-  res.json(dogArray[0]);
+  dogQueue.dequeue();
+  res.json(dogQueue.peek());
   console.log('You have adopted a dog!')
+  res.status(204).end();
 });
 function runServer(port = PORT) {
   const server = app
